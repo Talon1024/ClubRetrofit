@@ -1,0 +1,51 @@
+/* Main jumbotron */
+body > main {
+    padding-left: 5rem; /* Make room for navbar */
+}
+body > main > #heady {
+    /* I learned how to do this from this article: */
+    /* https://css-tricks.com/books/greatest-css-tricks/hard-stop-gradients/ */
+    /* Colours inspired by the images from this webpage: */
+    /* https://wallpaperaccess.com/retro-neon-city */
+    background-image: linear-gradient(
+        to bottom,
+        #402 0%, #402 10%,
+        #690034 10%, #690034 20%,
+        #a40052 20%, #a40052 30%,
+        #a9414b 30%, #a9414b 40%,
+        #ae723c 40%, #ae723c 50%,
+        #acad00 50%, #acad00 60%,
+        #d1d100 60%, #d1d100 70%,
+        #FF3 70%, #FF3 80%,
+        #d1d100 80%, #d1d100 90%,
+        #acad00 90%, #acad00 100%
+    );
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body > main > header > div {
+    max-width: 70%;
+}
+
+.watch-us {
+    max-width: 50%;
+    margin-right: 40%;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .watch-us {
+        max-width: 70%;
+        margin-right: 0;
+    }
+}
+
+/* Navbar will appear at the top */
+@media only screen and (max-width: 750px) {
+    body > main {
+        padding-left: 0;
+        padding-top: 4rem;
+    }
+}

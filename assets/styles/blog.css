@@ -1,0 +1,56 @@
+
+#blog {
+    background-image: linear-gradient(
+        to bottom,
+        #500 0%, #500 25%,
+        #a00 25%, #a00 50%,
+        #f00 50%, #f00 75%,
+        #f50 75%, #f50 100%
+    );
+}
+
+#blog > h1:first-child {
+    /* Because the topmost colour is dark */
+    color: white;
+}
+
+#blog > * {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#blog > article {
+    margin: 2rem auto;
+}
+
+#blog > article > header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#blog > article > header > :first-child {
+    flex-grow: 1;
+}
+#blog > article > header > h1, #blog > article > header > h3 {
+    margin: .75rem .25rem;
+}
+#blog > article > header img {
+    vertical-align: middle;
+    max-height: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+    #blog > * {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #blog > article > header {
+        display: block;
+    }
+    #blog > article > header > * {
+        text-align: center;
+    }
+}

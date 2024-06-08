@@ -1,0 +1,52 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Silkscreen, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Primary sections */
+
+.primary-section {
+    min-height: 100vh;
+    display: flow-root;
+}
+
+/* Stupid boxes */
+
+.stupidbox {
+    background-color: white;
+    border: 9px ridge #AAA;
+    padding: 0 7px;
+}
+
+/* Backgrounds */
+
+.retrofit-bg-small {
+    background-image: linear-gradient(
+        to bottom,
+        #a05 0%, #a05 30%,
+        #aa0 30%, #aa0 70%,
+        #05a 70%, #05a 100%
+    );
+}
+
+/* Placeholder background */
+
+.bobobob {
+    background-image: linear-gradient(to bottom, red, #FA0);
+}
+

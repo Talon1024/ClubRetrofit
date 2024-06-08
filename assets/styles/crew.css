@@ -1,0 +1,142 @@
+/* Crew */
+
+.crewmate {
+    margin: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: 1fr auto;
+}
+.crewmate:nth-child(2n) {
+    margin-right: 10%;
+}
+.crewmate:nth-child(2n+1) {
+    margin-left: 10%;
+}
+
+/* Name and avatar */
+.crewmate > header {
+    display: flex;
+    align-items: center;
+}
+/* Social media icons */
+.crewmate > nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.crewmate > nav > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin: 0;
+    /*
+     * Needed to add the required clear space around the YouTube icon. From the official documentation:
+     *
+     * The clear space around the logo icon must be equal to or greater than the size of the triangle within the icon.
+     *
+     * https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
+     */
+    padding: 7px;
+}
+/* Make social media icons take up an equal amount of space */
+.crewmate > nav > ul > li {
+    /* Prevent giant images from overriding base size so that the flexbox columns can have equal widths */
+    /* "Yup, setting flex: 1 sets the flex-basis to 0%" */
+    /* https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/ */
+    flex-basis: 0%;
+    flex-grow: 1;
+    list-style-type: none;
+}
+.crewmate > nav > ul > li > a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.crewmate > nav img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.crewmate > nav > ul > li > a:has(> img[src^="./assets/logos/yt"]) {
+    /*
+     * Needed to add the required clear space around the YouTube icon. From the official documentation:
+     *
+     * The clear space around the logo icon must be equal to or greater than the size of the triangle within the icon.
+     *
+     * https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
+     */
+    padding: 4px 0;
+}
+
+/* Why? I developed this website on a Steam Deck. */
+@media only screen and (min-width: 1024px) {
+    .crewmate {
+        max-width: 800px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .crewmate {
+        margin: 2rem auto;
+        max-width: 90%;
+    }
+    .crewmate:nth-child(2n) {
+        margin-right: auto;
+    }
+    .crewmate:nth-child(2n+1) {
+        margin-left: auto;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .crewmate {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto 3rem;
+        font-size: .75rem;
+    }
+    .crewmate > nav {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .crewmate > nav > ul {
+        flex-flow: row nowrap;
+    }
+}
+
+/* Quote from the streamer */
+.streamer-quote {
+    position: relative;
+    color: black;
+    background-color: #ccc;
+    margin: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+}
+.streamer-quote > :first-child {
+    margin-top: 0;
+}
+.streamer-quote > :last-child {
+    margin-bottom: 0;
+}
+.streamer-quote::before {
+    content: "\201D";
+    color: #555;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    font-size: 2rem;
+}
+
+#crew {
+    background-image: linear-gradient(
+        to bottom,
+        #0cf 0%, #0cf 14%,
+        #05a 14%, #05a 29%,
+        #115 29%, #115 43%,
+        black 43%, black 57%,
+        #401 57%, #401 71%,
+        #a05 71%, #a05 86%,
+        #ff0080 86%, #ff0080 100%
+    );
+}

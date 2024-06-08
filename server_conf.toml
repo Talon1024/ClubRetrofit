@@ -1,0 +1,6 @@
+host="127.0.0.1" # localhost only
+port=3000
+
+index=false
+spa=true
+graceful_shutdown=true
