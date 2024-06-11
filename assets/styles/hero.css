@@ -24,9 +24,18 @@ body > main > #heady {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
 }
 body > main > header > div {
     max-width: 70%;
+}
+
+.screenshots-marquees {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: none; /* Just for now, until I figure it out. */
 }
 
 .watch-us {

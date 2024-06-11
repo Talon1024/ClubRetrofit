@@ -9,8 +9,8 @@ body > nav {
     top: 0;
     height: 100%;
     width: 5rem;
-    background-color: #A0A;
-    border-right: 2px solid #505;
+    background-color: #AAA;
+    border-right: 2px solid #555;
     z-index: 100;
 }
 body > nav > ul {
@@ -28,7 +28,7 @@ body > nav li:first-child > a {
     font-family: Silkscreen, sans-serif;
 }
 body > nav li > a {
-    background-color: #A0A;
+    background-color: #AAA;
     text-align: center;
     color: black;
     text-decoration: none;
@@ -39,8 +39,8 @@ body > nav li > a {
     height: 100%;
 }
 body > nav li + li > a {
-    border-top: 2px solid #F5F;
-    border-bottom: 2px solid #505;
+    border-top: 2px solid #FFF;
+    border-bottom: 2px solid #555;
 }
 
 /* Make nav bar appear at the top on mobile devices in both portrait and landscape mode. */
@@ -49,7 +49,7 @@ body > nav li + li > a {
     body > nav {
         width: 100%;
         height: 4rem;
-        border-bottom: 2px solid #505;
+        border-bottom: 2px solid #555;
         border-right: none;
     }
     body > nav > ul {
@@ -58,8 +58,8 @@ body > nav li + li > a {
         height: 100%;
     }
     body > nav li + li > a {
-        border-left: 2px solid #F5F;
-        border-right: 2px solid #505;
+        border-left: 2px solid #FFF;
+        border-right: 2px solid #555;
         border-top: none;
         border-bottom: none;
     }

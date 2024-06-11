@@ -1,16 +1,24 @@
 /* Crew */
 
+#crewmateys {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#crewmateys > * {
+    flex: 0 1 750px;
+}
+
 .crewmate {
-    margin: 2rem 4rem;
+    margin: 2rem 2rem;
     display: grid;
-    grid-template-columns: 1fr 3rem;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 3rem;
+    grid-template-rows: auto auto;
 }
+
 .crewmate:nth-child(2n) {
-    margin-right: 10%;
-}
-.crewmate:nth-child(2n+1) {
-    margin-left: 10%;
+    margin-left: 6rem;
 }
 
 /* Name and avatar */
@@ -45,7 +53,7 @@
     /* Prevent giant images from overriding base size so that the flexbox columns can have equal widths */
     /* "Yup, setting flex: 1 sets the flex-basis to 0%" */
     /* https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/ */
-    flex-basis: 0%;
+    flex-basis: 0;
     flex-grow: 1;
     list-style-type: none;
 }
@@ -73,21 +81,21 @@
 }
 
 /* Why? I developed this website on a Steam Deck. */
-@media only screen and (min-width: 1024px) {
-    .crewmate {
-        max-width: 800px;
+
+@media only screen and (min-width: 1700px) {
+    .crewmate:nth-child(2n) {
+        margin-left: 2rem;
     }
 }
+
 @media only screen and (max-width: 900px) {
     .crewmate {
-        margin: 2rem auto;
+        margin: 2rem 3rem 2rem 1rem;
         max-width: 90%;
     }
     .crewmate:nth-child(2n) {
-        margin-right: auto;
-    }
-    .crewmate:nth-child(2n+1) {
-        margin-left: auto;
+        margin-left: 3rem;
+        margin-right: 1rem;
     }
 }
 @media only screen and (max-width: 650px) {
