@@ -78,6 +78,7 @@
 }
 .schedule > .event:hover {
     opacity: 1.0;
+    z-index: 20;
 }
 
 /* Hours */

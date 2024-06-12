@@ -35,14 +35,6 @@ body {
 
 /* Backgrounds */
 
-.retrofit-bg-small {
-    background-image: linear-gradient(
-        to bottom,
-        #a05 0%, #a05 30%,
-        #aa0 30%, #aa0 70%,
-        #05a 70%, #05a 100%
-    );
-}
 
 /* Placeholder background */
 

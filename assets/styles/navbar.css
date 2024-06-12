@@ -43,6 +43,11 @@ body > nav li + li > a {
     border-bottom: 2px solid #555;
 }
 
+
+.retrofit-bg-small {
+    background-color: #ffde00;
+}
+
 /* Make nav bar appear at the top on mobile devices in both portrait and landscape mode. */
 
 @media only screen and (max-width: 750px) {

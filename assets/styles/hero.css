@@ -26,22 +26,84 @@ body > main > #heady {
     align-items: center;
     position: relative;
 }
-body > main > header > div {
+body > main > #heady > * {
     max-width: 70%;
+    z-index: 20;
 }
 
-.screenshots-marquees {
+body > main > #heady > .screenshots-marquees {
     position: absolute;
     left: 0;
     top: 0;
-    overflow: hidden;
-    display: none; /* Just for now, until I figure it out. */
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    z-index: 10;
 }
 
-.watch-us {
+.screenshots-marquees {
+    overflow: hidden;
+    display: flow-root;
+}
+
+.screenshots-marquees > * {
+    opacity: 0.5;
+    position: absolute;
+    max-width: 16%;
+}
+
+.screenshots-marquees > :nth-child(1) {
+    top: 15%;
+    left: 33%;
+}
+
+.screenshots-marquees > :nth-child(2) {
+    top: 22%;
+    left: 11%;
+}
+
+.screenshots-marquees > :nth-child(3) {
+    top: 41%;
+    left: 15%;
+}
+
+.screenshots-marquees > :nth-child(4) {
+    top: 66%;
+    left: 41%;
+}
+
+.screenshots-marquees > :nth-child(5) {
+    top: 7%;
+    left: 80%;
+}
+
+.screenshots-marquees > :nth-child(6) {
+    top: 38%;
+    left: 60%;
+}
+
+.screenshots-marquees > :nth-child(7) {
+    top: 71%;
+    left: 5%;
+}
+
+.screenshots-marquees > :nth-child(8) {
+    top: 86%;
+    left: 81%;
+}
+
+body > main > #heady > .watch-us {
     max-width: 50%;
     margin-right: 40%;
     margin-bottom: 2rem;
+}
+
+body > main > #heady > #title-intro {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -56,5 +118,20 @@ body > main > header > div {
     body > main {
         padding-left: 0;
         padding-top: 4rem;
+    }
+    .screenshots-marquees > * {
+        max-width: 25%;
+    }
+}
+
+/* These are a bit too narrow on mobiles in portrait mode... */
+@media only screen and (max-width: 600px) {
+    body > main > #heady > #title-intro {
+        margin: 2rem;
+        max-width: 100%;
+    }
+    body > main > #heady > .watch-us {
+        margin: 2rem;
+        max-width: 100%;
     }
 }

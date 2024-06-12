@@ -1,1 +1,19 @@
 /* Apply for Club Retrofit! */
+#apply {
+    background-image: linear-gradient(
+        to bottom,
+        #5c002d 0%, #5c002d 11%,
+        #74003a 11%, #74003a 22%,
+        #9a004d 22%, #9a004d 33%,
+        #b5005b 33%, #b5005b 44%,
+        #ecb866 44%, #ecb866 56%,
+        #ffff64 56%, #ffff64 67%,
+        #00ccff 67%, #00ccff 78%,
+        #0196ba 78%, #0196ba 89%,
+        #00333f 89%, #00333f 100%
+    );
+}
+
+#apply > h1:first-child {
+    color: white;
+}

@@ -2,10 +2,11 @@
 #blog {
     background-image: linear-gradient(
         to bottom,
-        #500 0%, #500 25%,
-        #a00 25%, #a00 50%,
-        #f00 50%, #f00 75%,
-        #f50 75%, #f50 100%
+        #4c1f18 0%, #4c1f18 20%,
+        #6d311d 20%, #6d311d 40%,
+        #ae681a 40%, #ae681a 60%,
+        #dea70d 60%, #dea70d 80%,
+        #ffde00 80%, #ffde00 100%
     );
 }
 
