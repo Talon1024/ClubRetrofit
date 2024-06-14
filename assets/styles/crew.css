@@ -39,6 +39,7 @@
     flex-flow: column nowrap;
     height: 100%;
     margin: 0;
+    padding: 0;
     /*
      * Needed to add the required clear space around the YouTube icon. From the official documentation:
      *
@@ -46,7 +47,6 @@
      *
      * https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
      */
-    padding: 7px;
 }
 /* Make social media icons take up an equal amount of space */
 .crewmate > nav > ul > li {
@@ -56,6 +56,16 @@
     flex-basis: 0;
     flex-grow: 1;
     list-style-type: none;
+    /*
+     * Needed to add the required clear space around the YouTube icon. From the official documentation:
+     *
+     * The clear space around the logo icon must be equal to or greater than the size of the triangle within the icon.
+     *
+     * https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
+     *
+     * Also makes the other icons look good by giving them just as much clear space.
+     */
+    padding: 5px;
 }
 .crewmate > nav > ul > li > a {
     display: flex;
@@ -68,16 +78,6 @@
 .crewmate > nav img {
     max-width: 100%;
     max-height: 100%;
-}
-.crewmate > nav > ul > li > a:has(> img[src^="./assets/logos/yt"]) {
-    /*
-     * Needed to add the required clear space around the YouTube icon. From the official documentation:
-     *
-     * The clear space around the logo icon must be equal to or greater than the size of the triangle within the icon.
-     *
-     * https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors
-     */
-    padding: 4px 0;
 }
 
 /* Why? I developed this website on a Steam Deck. */
@@ -110,6 +110,11 @@
     }
     .crewmate > nav > ul {
         flex-flow: row nowrap;
+    }
+    .crewmate > nav > ul > li:has(> a > img[src^="./assets/logos/yt"]) {
+        /* Account for the YouTube icon width */
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
 

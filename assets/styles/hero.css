@@ -32,19 +32,16 @@ body > main > #heady > * {
 }
 
 body > main > #heady > .screenshots-marquees {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
     max-width: 100%;
-    z-index: 10;
 }
 
 .screenshots-marquees {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    z-index: 1;
     display: flow-root;
 }
 
@@ -54,44 +51,81 @@ body > main > #heady > .screenshots-marquees {
     max-width: 16%;
 }
 
+@keyframes simple_marquee {
+    from { left: -25%; }
+    to { left: 100%; }
+}
+
+/*
+ * Delays were calculated using this formula:
+ *
+ * Let xn represent the initial off-screen left offset percentage
+ * Let xi represent the desired initial left offset percentage
+ * Let s represent the animation duration in seconds
+ *
+ * delay = (xn + xi) / (xn + 100.) * -s
+ *
+ * The answers were rounded to the nearest tenth
+ */
+
 .screenshots-marquees > :nth-child(1) {
-    top: 15%;
+    top: 4%;
     left: 33%;
+    animation: 15s linear -6.3s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(2) {
-    top: 22%;
+    top: 12%;
     left: 11%;
+    animation: 14s linear -3.3s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(3) {
     top: 41%;
     left: 15%;
+    animation: 17s linear -4s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(4) {
     top: 66%;
     left: 41%;
+    animation: 15s linear -4s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(5) {
     top: 7%;
     left: 80%;
+    animation: 12s linear -9.9s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(6) {
-    top: 38%;
+    top: 24%;
     left: 60%;
+    animation: 14s linear -9.2s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(7) {
     top: 71%;
     left: 5%;
+    animation: 18s linear -3.3s infinite normal none running simple_marquee;
 }
 
 .screenshots-marquees > :nth-child(8) {
     top: 86%;
     left: 81%;
+    animation: 16s linear -13.4s infinite normal none running simple_marquee;
+}
+
+.screenshots-marquees > :nth-child(9) {
+    top: 40%;
+    left: 37%;
+    animation: 13s linear -5.9s infinite normal none running simple_marquee;
+}
+
+.screenshots-marquees > :nth-child(10) {
+    top: 65%;
+    left: 65%;
+    animation: 15s linear -10.5s infinite normal none running simple_marquee;
 }
 
 body > main > #heady > .watch-us {
@@ -119,9 +153,6 @@ body > main > #heady > #title-intro {
         padding-left: 0;
         padding-top: 4rem;
     }
-    .screenshots-marquees > * {
-        max-width: 25%;
-    }
 }
 
 /* These are a bit too narrow on mobiles in portrait mode... */
@@ -133,5 +164,8 @@ body > main > #heady > #title-intro {
     body > main > #heady > .watch-us {
         margin: 2rem;
         max-width: 100%;
+    }
+    .screenshots-marquees > * {
+        max-width: 25%;
     }
 }
