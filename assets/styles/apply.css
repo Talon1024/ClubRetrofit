@@ -14,6 +14,30 @@
     );
 }
 
-#apply > h1:first-child {
+#apply > div {
     color: white;
+    max-width: 96%;
+    padding: 0 2%;
+    margin: 2rem auto;
+    display: flow-root;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#apply > div > form > div:first-child {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#apply > div > form > div:first-child > * {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+#apply > div > form label {
+    display: flex;
+    margin: 1rem 0;
+    flex-flow: row wrap;
+}
+
+#apply > div > form label > * {
 }
