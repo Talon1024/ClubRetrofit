@@ -128,6 +128,11 @@ body > main > #heady > .screenshots-marquees {
     animation: 15s linear -10.5s infinite normal none running simple_marquee;
 }
 
+body > main > #heady > * + * {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
 body > main > #heady > .watch-us {
     max-width: 50%;
     margin-right: 40%;
