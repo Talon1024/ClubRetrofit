@@ -33,8 +33,78 @@
     flex-grow: 1;
 }
 
+#apply > div > form #about-me {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: auto 4rem;
+}
+
+#apply > div > form #about-me > label {
+    margin: .25rem;
+}
+
+#apply > div > form #about-me input[name=name] {
+    font-family: Silkscreen, sans-serif;
+    max-width: 100%;
+}
+
+#apply > div > form #about-me #avatar-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: .5rem;
+}
+
 #apply > div > form #social-medias {
     display: grid;
     grid-template-columns: 1fr 70%;
-    grid-auto-rows: auto;
+}
+
+#apply > div > form #social-medias > label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+#apply > div > form #social-medias > p:last-child {
+    margin: .5rem 0;
+}
+
+#apply > div > form .full-grid-width {
+    grid-column: 1 / -1;
+}
+
+#apply > div > form input[type="submit"] {
+    padding: 1rem;
+    font-size: 1rem;
+    appearance: none;
+    border-top: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+    border-bottom: 2px solid #555;
+    border-right: 2px solid #555;
+    background-color: #AAA;
+    font-family: Silkscreen, sans-serif;
+    width: 16rem;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+@media only screen and (min-width: 500px) {
+    #apply > div > form #about-me input[name=name] {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+    /* Fix social media link inputs overflowing */
+    #apply > div > form #social-medias {
+        grid-template-columns: 1fr 60%;
+    }
+    /* Fix apply button overflowing */
+    #apply > div > form input[type="submit"] {
+        width: 100%;
+    }
 }

@@ -219,25 +219,32 @@
 <p>Applications are <strong>open</strong>! Fill out the form below and submit it, and we'll review your information shortly.</p>
 <form method="post">
 <div>
-<fieldset>
+<fieldset id="about-me">
 <legend>About you:</legend>
-<label>*Your internet nickname: <input type="text" name="name" required /></label>
-<label>Your avatar (max size 256x256): <input type="file" name="avatar" accept=".png,.jpg,.bmp,.gif" /></label>
-<label>A quote from you, preferably from one of your clips: <textarea name="quote" /></textarea>
-<label>Link to the clip: <input type="url" name="cliplink" pattern="https://(www
-|clips).twitch.tv/.*" maxlength="100" /></label>
+<label for="avatar">Avatar:</label>
+<label for="name">*Name:</label>
+<input type="hidden" name="avatar" accept=".png,.jpg,.bmp,.gif" />
+<div id="avatar-input"><img src="./assets/avatars/anonyboob.png" alt="Your avatar" /></div>
+<input type="text" name="name" required size="7"/>
+<label for="quote" class="full-grid-width">A quote from you, preferably from one of your clips or shorts:</label>
+<textarea name="quote" class="full-grid-width" /></textarea>
+<label for="cliplink" class="full-grid-width">Link to the clip: </label>
+<input type="url" name="cliplink" pattern="https://(www|clips).twitch.tv/.*" maxlength="100" class="full-grid-width"/>
+<label for="mydesc" class="full-grid-width">A short description of you, which games you like to play, etc.:</label>
+<textarea name="mydesc" class="full-grid-width"></textarea>
 </fieldset>
 <fieldset id="social-medias">
-<legend>Active social media accounts:</legend>
-<label for="social_twitter">X/Twitter: </label><input type="url" name="social_twitter" pattern="https://x.com/*"/>
-<label for="social_mastodon">Mastodon: </label><input type="url" name="social_mastodon" pattern="https://.*"/>
-<label for="social_github">Github: </label><input type="url" name="social_github" pattern="https://github\.com/[^/]+"/>
-<label for="social_youtube">Youtube: </label><input type="url" name="social_youtube" pattern="https://www\.youtube\.com/.*"/>
-<label for="social_peertube">Peertube: </label><input type="url" name="social_peertube" pattern="https://.*"/>
-<label for="social_facebook">Facebook: </label><input type="url" name="social_facebook" pattern="https://www\.facebook\.com/.*"/>
-<label for="social_twitch">Twitch: </label><input type="url" name="social_twitch" pattern="https://www\.twitch\.tv/.*"/>
-<label for="social_kick">Kick: </label><input type="url" name="social_kick" pattern="https://kick\.com/.*"/>
-<label for="social_owncast">Owncast: </label><input type="url" name="social_owncast" pattern="https://.*"/>
+<legend>Social media*:</legend>
+<label for="social_twitter">X/Twitter: </label><input type="url" name="social_twitter" pattern="https://x.com/*" size="10"/>
+<label for="social_mastodon">Mastodon: </label><input type="url" name="social_mastodon" pattern="https://.*" size="10"/>
+<label for="social_github">Github: </label><input type="url" name="social_github" pattern="https://github\.com/[^/]+" size="10"/>
+<label for="social_youtube">Youtube: </label><input type="url" name="social_youtube" pattern="https://www\.youtube\.com/.*" size="10"/>
+<label for="social_peertube">Peertube: </label><input type="url" name="social_peertube" pattern="https://.*" size="10"/>
+<label for="social_facebook">Facebook: </label><input type="url" name="social_facebook" pattern="https://www\.facebook\.com/.*" size="10"/>
+<label for="social_twitch">Twitch: </label><input type="url" name="social_twitch" pattern="https://www\.twitch\.tv/.*" size="10"/>
+<label for="social_kick">Kick: </label><input type="url" name="social_kick" pattern="https://kick\.com/.*" size="10"/>
+<label for="social_owncast">Owncast: </label><input type="url" name="social_owncast" pattern="https://.*" size="10"/>
+<p class="full-grid-width">*At least one is required</p>
 </fieldset>
 </div>
 <p>* Required</p>

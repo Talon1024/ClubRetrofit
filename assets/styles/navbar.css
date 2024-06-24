@@ -59,7 +59,6 @@ body > nav li + li > a {
     }
     body > nav > ul {
         flex-flow: row nowrap;
-        justify-content: flex-start;
         height: 100%;
     }
     body > nav li + li > a {
@@ -67,5 +66,20 @@ body > nav li + li > a {
         border-right: 2px solid #555;
         border-top: none;
         border-bottom: none;
+    }
+}
+
+/* Attempt to make navbar items smaller on narrow screens */
+
+@media only screen and (max-width: 360px) {
+    body > nav {
+        height: 2rem;
+    }
+    body > nav li > a {
+        font-size: 0.75rem;
+    }
+    body > nav li {
+        flex-basis: 16px;
+        flex-grow: 1;
     }
 }
