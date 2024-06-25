@@ -8,4 +8,4 @@ with open(argv[1], "rb") as dataf:
         coolour = dataf.read(3)
         if len(coolour) < 3:
             break
-        print("'#{:02x}{:02x}{:02x}'".format(*coolour))
+        print("#{:02x}{:02x}{:02x}".format(*coolour))
