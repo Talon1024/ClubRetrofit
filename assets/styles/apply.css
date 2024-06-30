@@ -58,7 +58,7 @@
 
 #apply > div > form #social-medias {
     display: grid;
-    grid-template-columns: 1fr 70%;
+    grid-template-columns: 6.5em 1fr;
 }
 
 #apply > div > form #social-medias > label {
@@ -99,10 +99,6 @@
 
 
 @media only screen and (max-width: 360px) {
-    /* Fix social media link inputs overflowing */
-    #apply > div > form #social-medias {
-        grid-template-columns: 1fr 60%;
-    }
     /* Fix apply button overflowing */
     #apply > div > form input[type="submit"] {
         width: 100%;
