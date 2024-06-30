@@ -35,12 +35,12 @@ def cssify(stopstr):
 if __name__ == "__main__":
     args = argv
     if len(args) == 1:
-        stdin_stuff = stdin.read().split("\n")
-        if len(stdin_stuff) == 0:
+        if not stdin.isatty():
+            stdin_stuff = stdin.read().split("\n")
+            args = stdin_stuff
+        else:
             print("No arguments! If you're writing the colours in CSS notation with a hash/number sign in front, you have to quote them so that the shell doesn't interpret them as comments.")
             exit(0)
-        else:
-            args = stdin_stuff
 
     stops = "\n".join(gradient_stops(args))
     print(cssify(stops))
